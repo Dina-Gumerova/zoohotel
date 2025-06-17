@@ -1,0 +1,119 @@
+﻿<Window x:Class="Зоогостиница_диплом_.Settlement"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Заселение" Height="800" Width="900" 
+        Loaded="Window_Loaded">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid Margin="10">
+            <Grid.Background>
+                <ImageBrush ImageSource="C:\Users\Asus\Downloads\Зоогостиница(диплом)\animal\1679167968_bogatyr-club-p-veterinarnii-fon-foni-krasivo-4.jpg" Stretch="UniformToFill"/>
+            </Grid.Background>
+
+            <StackPanel Margin="10" VerticalAlignment="Top">
+                <Label Content="Заселение" FontSize="24" FontWeight="Bold"/>
+
+                <!-- Выбор владельца -->
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+                    <Label Content="Выберите владельца:" Width="150"/>
+                    <ComboBox x:Name="ownerComboBox" Width="300" SelectionChanged="ownerComboBox_SelectionChanged"/>
+                    <Button Content="Новый владелец" Margin="10,0" Click="AddNewOwner_Click" Background="LightYellow"/>
+                </StackPanel>
+
+                <!-- Данные владельца -->
+                <StackPanel x:Name="ownerFormPanel" Margin="0,10,0,0">
+                    <Label Content="Фамилия:"/>
+                    <TextBox x:Name="surNameTextBox" Width="400"/>
+
+                    <Label Content="Имя:"/>
+                    <TextBox x:Name="NameTextBox" Width="400"/>
+
+                    <Label Content="Отчество:"/>
+                    <TextBox x:Name="patronymicTextBox" Width="400"/>
+
+                    <Label Content="Телефон:"/>
+                    <TextBox x:Name="PhoneemailTextBox" Width="400" PreviewTextInput="PhoneNumberTextBox_PreviewTextInput"/>
+
+                    <Label Content="Паспортные данные:"/>
+                    <TextBox x:Name="pasportTextBox" Width="400"/>
+                </StackPanel>
+
+                <!-- Список питомцев -->
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <Label Content="Питомцы:" Width="150"/>
+                    <ComboBox x:Name="petsComboBox" Width="300" SelectionChanged="petsComboBox_SelectionChanged"/>
+                    <Button Content="Добавить питомца" Margin="10,0" Click="AddNewPet_Click" Background="LightYellow"/>
+                </StackPanel>
+
+                <!-- Данные питомца -->
+                <StackPanel x:Name="animalFormPanel" Margin="0,10,0,0">
+                    <Label Content="Кличка:"/>
+                    <TextBox x:Name="animalnametextbox" Width="400"/>
+
+                    <Label Content="Порода:"/>
+                    <TextBox x:Name="breedtextbox" Width="400"/>
+
+                    <Label Content="Окрас:"/>
+                    <TextBox x:Name="OKRACtEXTBOX" Width="400"/>
+
+                    <Label Content="Пол:"/>
+                    <ComboBox x:Name="polTypeComboBox" Width="400"/>
+
+                    <Label Content="Дата рождения:"/>
+                    <DatePicker x:Name="BirthdayDatePicker" Width="400"/>
+
+                    <Label Content="Вид животного:"/>
+                    <ComboBox x:Name="animalTypeComboBox" Width="400"/>
+
+                    <Label Content="Тип питания:"/>
+                    <ComboBox x:Name="feedingTypeComboBox" Width="400"/>
+                    
+                    <Label Content="Размер:"/>
+                    <TextBox x:Name="SizeTextBox" Width="400"/>
+
+                    <Label Content="Вес:"/>
+                    <TextBox x:Name="WeightTextBox" Width="400"/>
+
+                    <Label Content="Возраст:"/>
+                    <TextBox x:Name="AgeTextBox" Width="400"/>
+
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Еда в день:"/>
+                        <Button Content="-" Width="20" Click="Decrease_Click"/>
+                        <TextBox x:Name="NumberTextBox" Width="50" Text="0"/>
+                        <Button Content="+" Width="20" Click="Increase_Click"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Прогулки в день:"/>
+                        <Button Content="-" Width="20" Click="Decrease_Click2"/>
+                        <TextBox x:Name="Number2TextBox" Width="50" Text="0"/>
+                        <Button Content="+" Width="20" Click="Increase_Click2"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <!-- Данные заселения -->
+                <Label Content="Заселение в клетку" FontWeight="Bold" Margin="0,15,0,5"/>
+                <StackPanel>
+                    <Label Content="Номер клетки:"/>
+                    <TextBox x:Name="CellNumberTextBox" Width="200"/>
+
+                    <Label Content="Дата начала пребывания:"/>
+                    <DatePicker x:Name="StartDatePicker" Width="200"/>
+
+                    <Label Content="Дата окончания пребывания:"/>
+                    <DatePicker x:Name="EndDatePicker" Width="200"/>
+
+                  
+                </StackPanel>
+
+                <!-- Нижние кнопки -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
+                    <Button x:Name="SaveButton" Content="Сохранить и заселить" Click="SaveButton_Click" Background="LightYellow"/>
+                    <Button Content="Договор" Width="100" Margin="5" Click="GenerateContract_Click" Background="LightYellow"/>
+                    <Button Content="Назад" Width="100" Margin="5" Click="CancelButton_Click" Background="LightYellow"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Window>

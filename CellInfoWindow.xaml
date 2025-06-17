@@ -1,0 +1,21 @@
+﻿<Window x:Class="Зоогостиница_диплом_.CellInfoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+
+        Title="Информация о животном" Height="418" Width="400">
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBox x:Name="InfoTextBox" IsReadOnly="True" TextWrapping="Wrap"    AcceptsReturn="True" 
+                 VerticalScrollBarVisibility="Auto" FontSize="14" Background="LightYellow" Height="250"/>
+
+            <!-- Новый блок для выселения -->
+            <Label Content="Дата выселения:" Margin="0,10,0,0"/>
+            <DatePicker x:Name="EvictionDatePicker" SelectedDate="{x:Static sys:DateTime.Now}" />
+            <Button Content="Оплатить бронирование" Click="PayBooking_Click" Margin="0,10,0,0" Background="LightGreen"/>
+
+            <Button Content="Выселить" Click="Evict_Click" Margin="0,10,0,0" Background="Salmon"/>
+        </StackPanel>
+    </Grid>
+
+</Window>

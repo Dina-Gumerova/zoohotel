@@ -1,0 +1,17 @@
+﻿<Window x:Class="Зоогостиница_диплом_.SelectActionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Выбор действия" Height="200" Width="300" WindowStartupLocation="CenterOwner">
+    <Grid>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\Asus\Downloads\Зоогостиница(диплом)\animal\1679167968_bogatyr-club-p-veterinarnii-fon-foni-krasivo-4.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="Выберите действие:" FontSize="16" Margin="0,0,0,20" HorizontalAlignment="Center"/>
+            <Button Content="Бронирование" Width="150" Margin="5" Click="Booking_Click" Background="LightYellow"/>
+            <Button Content="Заселение" Width="150" Margin="5" Click="Settlement_Click" Background="LightYellow"/>
+        </StackPanel>
+    </Grid>
+</Window>

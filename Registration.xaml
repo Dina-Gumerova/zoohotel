@@ -1,0 +1,59 @@
+﻿<Window x:Class="Зоогостиница_диплом_.Registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Зоогостиница_диплом_"
+        mc:Ignorable="d"
+        Title="Регистрация" Height="500" Width="600" >
+
+    <Grid>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\Asus\Downloads\Зоогостиница(диплом)\animal\1679167968_bogatyr-club-p-veterinarnii-fon-foni-krasivo-4.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+
+        <Label Content="Логин" HorizontalAlignment="Left" Margin="138,9,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="UsernameTextBox" HorizontalAlignment="Center" Height="25" Margin="0,9,0,0" VerticalAlignment="Top" Width="200"/>
+
+        <Label Content="Пароль" HorizontalAlignment="Left" Margin="122,52,0,0"  VerticalAlignment="Top"  />
+        <PasswordBox x:Name="PasswordBox" HorizontalAlignment="Center" Width="200" Height="25" Margin="0,52,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="PasswordTextBox" HorizontalAlignment="Center" Width="200" Height="25" Margin="0,52,0,0" Visibility="Collapsed" VerticalAlignment="Top" />
+
+        <CheckBox x:Name="ShowPasswordCheckBox" Content="Показать пароль" Checked="ShowPasswordCheckBox_Checked" Unchecked="ShowPasswordCheckBox_Unchecked" Margin="417,52,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+        <Label Content="Повторите пароль" HorizontalAlignment="Left" Margin="73,89,0,0" VerticalAlignment="Top"  />
+        <PasswordBox x:Name="Password2Box" HorizontalAlignment="Center" Width="200" Height="25" Margin="0,89,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="Password2TextBox" HorizontalAlignment="Center" Width="200" Height="25" Margin="0,89,0,0" Visibility="Collapsed" VerticalAlignment="Top" />
+
+        <CheckBox x:Name="ShowPassword2CheckBox" Content="Показать пароль" Checked="ShowPassword2CheckBox_Checked" Unchecked="ShowPassword2CheckBox_Unchecked" Margin="417,89,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+        <Label Content="Имя" HorizontalAlignment="Left" Margin="146,134,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="NameTextBox" HorizontalAlignment="Center" Height="25" Margin="0,131,0,0" VerticalAlignment="Top" Width="200"/>
+
+        <Label Content="Фамилия" HorizontalAlignment="Left" Margin="121,171,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="surNameTextBox" HorizontalAlignment="Center" Height="25" Margin="0,176,0,0" VerticalAlignment="Top" Width="200"/>
+
+        <Label Content="Отчество" HorizontalAlignment="Left" Margin="120,217,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="patronymicTextBox" HorizontalAlignment="Center" Height="25" Margin="0,214,0,0" VerticalAlignment="Top" Width="200"/>
+
+        <Label Content="Телефон" HorizontalAlignment="Left" Margin="124,267,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="PhoneTextBox"  PreviewTextInput="PhoneNumberTextBox_PreviewTextInput"  MaxLength="18" HorizontalAlignment="Center" Height="25" Margin="0,264,0,0" VerticalAlignment="Top" Width="200" />
+
+        <Button Content="Зарегистрироваться" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="78,427,0,0" Click="RegisterButton_Click"  BorderBrush="Black"  Background="LightYellow" RenderTransformOrigin="0.524,2.473" Height="28"/>
+
+        <Label Content="Дата рождения" HorizontalAlignment="Left" Margin="87,310,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="BirthdayDatePicker" HorizontalAlignment="Center" Margin="0,310,0,0" VerticalAlignment="Top" Width="200" SelectedDateChanged="BirthdayDatePicker_SelectedDateChanged"/>
+        <TextBlock x:Name="AgeValidationMessage" Foreground="Red" HorizontalAlignment="Center" Margin="0,294,0,0" VerticalAlignment="Top" Width="200"/>
+
+        <Label Content="Адрес" HorizontalAlignment="Left" Margin="129,341,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="addressTextBox" HorizontalAlignment="Center" Height="25" Margin="0,342,0,0" VerticalAlignment="Top" Width="200"/>
+
+        <Label Content="Паспортные данные " HorizontalAlignment="Left" Margin="55,380,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="passportTextBox" HorizontalAlignment="Center" Height="25" Margin="0,381,0,0" VerticalAlignment="Top" Width="200"/>
+
+
+        <Button Content="Отмена" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="287,427,0,0" Click="CancelButton_Click" 
+                BorderBrush="Black"  Background="LightYellow" RenderTransformOrigin="0.524,2.473" Height="28"/>
+    </Grid>
+</Window>
